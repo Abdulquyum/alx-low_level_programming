@@ -12,15 +12,17 @@ int main(void)
 
 	for (q = 0; q <= 9; q++)
 	{
-		for (m = 1; m < 10; m++)
+		for (m = 1; m <= 9; m++)
 		{
 			if (q < m && q != m)
 			{
 				putchar(q + '0');
 				putchar(m + '0');
-				if (q + m != 17)
+				if (q * m != 72)
+				{
 				putchar(',');
 				putchar(' ');
+				}
 			}
 		}
 	}
