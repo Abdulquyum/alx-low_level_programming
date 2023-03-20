@@ -18,7 +18,7 @@ int main(void)
 			{
 				putchar(q + '0');
 				putchar(m + '0');
-				if (q * m != 72)
+				if (q + m != 17)
 				putchar(',');
 				putchar(' ');
 			}
