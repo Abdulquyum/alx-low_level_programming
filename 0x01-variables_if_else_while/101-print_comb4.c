@@ -11,9 +11,9 @@ int main(void)
 	int u;
 	int y;
 
-	for (q = 0; q <= 9; q++)
+	for (q = 0; q < 10; q++)
 	{
-		for (u = 1; u <= 9; u++)
+		for (u = 1; u < 10; u++)
 		{
 			for (y = 2; u <= 9; y++)
 			{
