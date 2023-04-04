@@ -17,16 +17,16 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		for (count = 0; accept[count]; count++)
 		{
-			if (*s == accept[count])
+			if (*s[count] == accept[count])
 			{
 				bytes++;
 				break;
 			}
 			else if (accept[count + 1] == '\0')
-			{
 				return (bytes);
-				s++;
-			}
+			else
+				return ('\0');
 		}
+		s++;
 	}
 }
