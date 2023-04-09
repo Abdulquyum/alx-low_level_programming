@@ -2,19 +2,19 @@
 #include <stdlib.h>
 
 /**
- * main - prints program
+ * main - prints program that multiplies two numbers
  *
  * @argc: parameter that counts arguments passed
  * @argv: parameter that prints string
  *
- * Return: Alwyas zero.
+ * Return: Returns 1 if functiondes not receive two arg, else 0.
  */
 int main(int argc, char *argv[])
 {
 	int num1;
 	int num2;
 
-	if (argc < 2)
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
