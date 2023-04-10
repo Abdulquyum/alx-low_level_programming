@@ -2,13 +2,12 @@
 #include <stdio.h>
 
 /**
- * _puts - prints strings of character
+ * _puts - prints strings of characters
  *
- * @s: parameter pointing to strings
+ * @s: parameter for string
  *
  * Return: Always 0.
  */
-
 void _puts(char *s)
 {
 	int q;
@@ -17,5 +16,5 @@ void _puts(char *s)
 	{
 		_putchar(s[q]);
 	}
-		_putchar('\n');
+	_putchar('\n');
 }
