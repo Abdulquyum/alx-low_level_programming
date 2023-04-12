@@ -29,5 +29,5 @@ char *create_array(unsigned int size, char c)
 		str[q] = c;
 		q++;
 	}
-	return(str);
+	return (str);
 }
