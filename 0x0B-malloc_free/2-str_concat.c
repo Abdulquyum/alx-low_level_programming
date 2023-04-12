@@ -17,9 +17,10 @@ char *str_concat(char *s1, char *s2)
 	int y = 0;
 	char *newString;
 
-	if (s1 == NULL || s2 == NULL)
-		s1 = s2 = "";
-
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	while (s1[q])
 		q++;
 
@@ -27,7 +28,7 @@ char *str_concat(char *s1, char *s2)
 		m++;
 
 	lenght = q + m;
-	newString = malloc((sizeof(char) * lenght) + 1);
+	newString = malloc(lenght * (sizeof(char)) + 1);
 	if (newString == NULL)
 	{
 		return (NULL);
