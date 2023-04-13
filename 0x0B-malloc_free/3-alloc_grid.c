@@ -17,7 +17,7 @@ int **alloc_grid(int width, int height)
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	two_dime = malloc(sizeof(int) * height);
+	two_dime = malloc(sizeof(int) * height + 1);
 
 	if (two_dime == NULL)
 	{
@@ -26,13 +26,13 @@ int **alloc_grid(int width, int height)
 
 	for (a = 0; a < height; a++)
 	{
-		two_dime[a] = malloc(sizeof(int) * width);
+		two_dime[a] = malloc(sizeof(int) * width + 1);
 
 		if (two_dime[a] == NULL)
 		{
 			for (; a >= 0; a--)
-				free (two_dime[a]);
-			free (two_dime);
+				free(two_dime[a]);
+			free(two_dime);
 			return (NULL);
 		}
 	}
