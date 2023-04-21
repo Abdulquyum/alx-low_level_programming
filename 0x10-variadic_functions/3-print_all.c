@@ -29,6 +29,9 @@ void print_all(const char * const format, ...)
 				case 'i':
 					printf("%s%d", seprator, va_arg(everything, int));
 					break;
+				case 'f':
+					printf("%s%f", seprator, va_arg(everything, double));
+					break;
 				case 's':
 					string = va_arg(everything, char *);
 					if (!string)
@@ -43,7 +46,7 @@ void print_all(const char * const format, ...)
 			q++;
 		}
 	}
+	va_end(everything);
+
 	printf("\n");
 }
-
-
