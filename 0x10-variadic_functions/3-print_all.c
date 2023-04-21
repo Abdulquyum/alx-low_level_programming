@@ -13,7 +13,7 @@ void print_all(const char * const format, ...)
 
 	int q = 0;
 	char *string;
-	char *seprator = " ";
+	char *seprator = "";
 
 	va_start(everything, format);
 
@@ -46,7 +46,5 @@ void print_all(const char * const format, ...)
 			q++;
 		}
 	}
-	va_end(everything);
-
 	printf("\n");
 }
