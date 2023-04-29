@@ -15,7 +15,7 @@ int _sqrt_recursion(int n)
 }
 
 /**
- * _square - returns square of two numbers
+ * _squareRoot - returns square of two numbers
  *
  * @n: parameter for num to calculate squareRoot
  * @y: parameter for iteration
