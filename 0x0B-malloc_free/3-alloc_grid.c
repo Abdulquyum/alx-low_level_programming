@@ -17,16 +17,17 @@ int **alloc_grid(int width, int height)
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	two_dime = malloc((sizeof(int) * height) + 1);
+	two_dime = malloc((sizeof(int *) * height));
 
 	if (two_dime == NULL)
 	{
+		free(two_dime);
 		return (NULL);
 	}
 
 	for (a = 0; a < height; a++)
 	{
-		two_dime[a] = malloc((sizeof(int) * width) + 1);
+		two_dime[a] = malloc((sizeof(int) * width));
 
 		if (two_dime[a] == NULL)
 		{
