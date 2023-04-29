@@ -11,7 +11,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int cents, convert_coin = 0;
+	int cents, convert_coins;
 
 	if (argc != 2)
 	{
@@ -20,30 +20,26 @@ int main(int argc, char *argv[])
 	}
 
 	cents = atoi(argv[1]);
+
 	if (cents < 1)
 		printf("%d\n", 0);
-	return (0);
 
+	convert_coins = 0;
 	while (cents > 0)
 	{
 		if (cents >= 25)
 			cents -= 25;
-
 		else if (cents >= 10)
 			cents -= 10;
-
 		else if (cents >= 5)
 			cents -= 5;
-
 		else if (cents >= 2)
 			cents -= 2;
-
 		else if (cents >= 1)
 			cents -= 1;
-
-		convert_coin += 1;
+		convert_coins++;
 	}
-	printf("%d\n", convert_coin);
+	printf("%d\n", convert_coins);
 
 	return (0);
 }
