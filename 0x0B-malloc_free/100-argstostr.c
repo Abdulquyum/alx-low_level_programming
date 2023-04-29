@@ -5,16 +5,16 @@
 int _strlen(char *s);
 
 /**
- * argstostr - Concatenates all arguments of the program
+ * argstostr - Cfunction that concatenates all the arguments of your program.
  *
  * @ac: parameter for argument count
  * @av: parameter for argument vector
  *
- * Returns: pointer to new string.
+ * Return: pointer to new string.
  */
 char *argstostr(int ac, char **av)
 {
-	int arg, q,len = 0;
+	int arg, q, len = 0;
 	char *str;
 
 	if (ac == 0 || av == NULL)
@@ -53,7 +53,7 @@ int _strlen(char *s)
 {
 	int count = 0, q;
 
-	for (q =0; s[q] != '\0'; q++)
+	for (q = 0; s[q] != '\0'; q++)
 		count++;
 
 	return (count);
