@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 		return (2);
 	}
 	int q;
-	unsigned char* ops = (unsigned char*) main;
+	unsigned char *ops = (unsigned char *) main;
 
 	for (q = 0; q < byte; q++)
 	{
