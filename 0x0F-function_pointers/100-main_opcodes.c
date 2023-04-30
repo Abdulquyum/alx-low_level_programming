@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void print_opcodes(int n);
-
 /**
  * main - entry point
  *
@@ -16,34 +14,26 @@ int main(int argc, char *argv[])
 	if (argc != 2)
 	{
 		printf("Error\n");
-		exit(1);
+		return (1);
 	}
 	int byte = atoi(argv[1]);
 
 	if (byte < 0)
 	{
 		printf("Error");
-		exit(2);
+		return (2);
 	}
-
-	print_opcodes(byte);
-
-	return (0);
-}
-
-/**
- * print_opcodes - prints opcodes of its own main function
- *
- * @n: parameter for number of bytes
- */
-void print_opcodes(int n)
-{
 	int q;
-	unsigned char* ops = (unsigned char*)print_opcodes;
+	unsigned char* ops = (unsigned char*) main;
 
-	for (q = 0; q < n; q++)
+	for (q = 0; q < byte; q++)
 	{
 		printf("%02x", *(ops + q));
+
+		if (q != byte - 1)
+			printf(" ");
 	}
 	printf("\n");
+
+	return (0);
 }
