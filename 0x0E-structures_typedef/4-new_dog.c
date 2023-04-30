@@ -4,7 +4,7 @@
 #include "dog.h"
 
 int _strlen(char *s);
-char * _strcpy(char *dest, char *src);
+char *_strcpy(char *dest, char *src);
 
 /**
  * dog_t - creates a new dog
@@ -27,14 +27,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (dog == NULL)
 		return (NULL);
 
-	dog->name = (char*) malloc(sizeof(char) * (lenght_1 + 1));
+	dog->name = (char *) malloc(sizeof(char) * (lenght_1 + 1));
 	if (dog->name == NULL)
 	{
 		free(dog);
 		return (NULL);
 	}
 
-	dog->owner = (char*) malloc(sizeof(char) * (lenght_2 + 1));
+	dog->owner = (char *) malloc(sizeof(char) * (lenght_2 + 1));
 	if (dog->owner == NULL)
 	{
 		free(dog->name);
