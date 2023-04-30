@@ -7,7 +7,7 @@ int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
 
 /**
- * dog_t - creates a new dog
+ * new_dog - creates a new dog
  *
  * @name: parameter for new_dog name
  * @age: parameter for new_dog age
@@ -61,7 +61,7 @@ int _strlen(char *s)
 	int count  = 0;
 	int q;
 
-	for (q = 0; s[q] != '\0', q++)
+	for (q = 0; s[q] != '\0'; q++)
 	count++;
 
 	return (count);
@@ -80,7 +80,7 @@ char *_strcpy(char *dest, char *src)
 	int q;
 
 	for (q = 0; src[q] != '\0'; q++)
-		dest[q] = src[q]
+		dest[q] = src[q];
 	dest[q++] = '\0';
 
 	return (dest);
