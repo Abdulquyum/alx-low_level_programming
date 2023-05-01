@@ -4,6 +4,7 @@
 /**
  * get_nodeint_at_index - access the nth node in the list
  *
+ * @head: parameter for starting node
  * @index: index of node
  *
  * Return: nth node of listint_t
