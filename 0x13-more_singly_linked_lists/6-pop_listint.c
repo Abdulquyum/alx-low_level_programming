@@ -21,11 +21,12 @@ int pop_listint(listint_t **head)
 	{
 		temp = *head;
 
-		*head = (*head)->next;
-
 		head_node = (*head)->n;
+
+		*head = (*head)->next;
 
 		free(temp);
 	}
+
 	return (head_node);
 }
