@@ -2,7 +2,7 @@
 #include "lists.h"
 
 /**
- * delete_node_at_index -deletes node at index position of the list
+ * delete_nodeint_at_index -deletes node at index position of the list
  *
  * @head: pointer to pointer to list
  * @index: nth position to delete at
