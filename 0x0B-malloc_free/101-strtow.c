@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "main.h"
 
-int count_word(char *s);
+int numWord(char *s);
 
 /**
  * **strtow - splits a string into words
@@ -17,7 +17,7 @@ char **strtow(char *str)
 
 	while (*(str + len))
 		len++;
-	words = count_word(str);
+	words = numWord(str);
 	if (words == 0)
 		return (NULL);
 
@@ -57,16 +57,14 @@ char **strtow(char *str)
  *
  * Return: number of words
  */
-int count_word(char *s)
+int numWord(char *s)
 {
-	int c, w;
+	int count = 0, result = 0;
 
-	w = 0;
-
-	for (c = 0; s[c] != '\0'; c++)
+	for (count = 0; s[count] != '\0'; count++)
 	{
-			w++;
+			result++;
 	}
 
-	return (w);
+	return (result);
 }
