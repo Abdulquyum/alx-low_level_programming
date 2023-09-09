@@ -9,13 +9,13 @@ int main(void)
 {
 	char q;
 
-	q = 97;
-	while (q <= 122)
+	for (q = 97; q <= 122; q++)
 	{
-		if (q == 101 || q == 113)
+		if (q == 101)
+			continue;
+		if (q == 113)
 			continue;
 		putchar(q);
-		q++;
 	}
 
 	putchar('\n');
