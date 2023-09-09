@@ -9,13 +9,16 @@ int main(void)
 {
 	int a, i;
 
-	for (a = 00; a <= 99; a++)
+	for (a = 10; a < 100; a++)
 	{
-		for (i = a + 1; i <= 99; i++)
+		for (i = a + 10; i < 100; i++)
 		{
-			putchar(a + '0');
-			putchar(i +'0');
-			if (a < 8 || i < 9)
+			putchar((a/10) + '0');
+			putchar((a%10) + '0');
+			putchar(' ');
+			putchar((i/10) + '0');
+			putchar((i%10) + '0');
+			if ((a != 98 || i != 99))
 			{
 				putchar(',');
 				putchar(' ');
