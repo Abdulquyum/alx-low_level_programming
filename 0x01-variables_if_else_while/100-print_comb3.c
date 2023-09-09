@@ -15,7 +15,6 @@ int main(void)
 		{
 			putchar(q + '0');
 			putchar(y + '0');
-			
 			if (q < 8 || y < 9)
 			{
 				putchar(',');
@@ -23,7 +22,6 @@ int main(void)
 			}
 		}
 	}
-
 	putchar('\n');
 
 	return (0);
