@@ -18,11 +18,12 @@ int main(void)
 		n = cur + prev;
 		prev = cur;
 		cur = n;
-		printf("%d", n);
+		printf ("%d", n);
 		count++;
 		if (count <= 49)
 			printf(", ");
 	}
+	printf("\n");
 
 	return (0);
 }
