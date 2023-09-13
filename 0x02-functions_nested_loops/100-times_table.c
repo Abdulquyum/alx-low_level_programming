@@ -21,6 +21,8 @@ void print_times_table(int n)
 				printf("%d", result);
 			else if (result < 10)
 				printf("   %d", result);
+			else if (result > 99)
+				printf(" %d", result);
 			else
 				printf("  %d", result);
 			if (b < n)
