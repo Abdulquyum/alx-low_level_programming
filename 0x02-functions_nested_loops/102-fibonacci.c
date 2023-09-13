@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int cur, prev, count, n;
+	unsigned long int cur, prev, count, n;
 
 	cur = 2, prev = 1;
 
@@ -18,7 +18,7 @@ int main(void)
 		n = cur + prev;
 		prev = cur;
 		cur = n;
-		printf("%d", n);
+		printf("%ld", n);
 		count++;
 		if (count <= 49)
 		{
