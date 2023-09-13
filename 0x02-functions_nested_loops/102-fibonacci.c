@@ -13,15 +13,17 @@ int main(void)
 
 	printf("%d, %d, ", 1, 2);
 	count = 2;
-	while(count < 50)
+	while (count < 50)
 	{
 		n = cur + prev;
 		prev = cur;
 		cur = n;
-		printf ("%d", n);
+		printf("%d", n);
 		count++;
 		if (count <= 49)
+		{
 			printf(", ");
+		}
 	}
 	printf("\n");
 
