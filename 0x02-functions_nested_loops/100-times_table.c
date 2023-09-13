@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_times_tabl - Prints n time table
+ * print_times_table - Prints n time table
  *
  * @n: Unknown parameter to print its table
  *
