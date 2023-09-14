@@ -11,13 +11,14 @@ void print_line(int n)
 {
 	int q;
 
-	for(q = 0; q < n; q++)
+	for (q = 0; q < n; q++)
 	{
 		if (n <= 0)
 		{
 			_putchar('\n');
 		}
-		else{
+		else
+		{
 			_putchar(95);
 		}
 	}
