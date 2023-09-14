@@ -9,9 +9,10 @@ int main(void)
 {
 	unsigned long int count, cur, prev, fibo;
 
-	cur = 1, prev = 0;
+	cur = 2, prev = 1;
 
-	count = 1;
+	printf("%d, %d, ", 1, 2);
+	count = 2;
 	while (count < 98)
 	{
 		fibo = cur + prev;
