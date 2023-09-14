@@ -11,7 +11,7 @@ int main(void)
 
 	prev = 0, cur = 1;
 
-	for (count = 1; count <= 4000000; count ++)
+	for (count = 1; count <= 4000000; count++)
 	{
 		n = cur + prev;
 		prev = cur;
