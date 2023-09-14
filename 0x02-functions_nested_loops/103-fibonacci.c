@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	unsigned long long int prev, cur, count, n, sum;
+	unsigned long long int prev, cur, count, n, sum = 0;
 
 	prev = 0, cur = 1;
 
