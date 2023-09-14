@@ -12,7 +12,7 @@ int main(void)
 	cur = 2, prev = 1;
 
 	printf("%d, %d, ", 1, 2);
-	count = 2;
+	count = 3;
 	while (count < 98)
 	{
 		fibo = cur + prev;
