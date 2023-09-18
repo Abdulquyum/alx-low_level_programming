@@ -19,6 +19,9 @@ void print_rev(char *s)
 
 	for (q = lenght; s[q] >= 0; q--)
 	{
+		if (lenght == 0)
+		break;
+
 		string = s[q];
 		_putchar(string);
 	}
