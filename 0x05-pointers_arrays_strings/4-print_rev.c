@@ -9,8 +9,8 @@
  */
 void print_rev(char *s)
 {
-	int q, lenght = 0;
-	char string;
+	long int q, lenght = 0;
+	unsigned char string;
 
 	for (q = 0; s[q] != '\0'; q++)
 	{
