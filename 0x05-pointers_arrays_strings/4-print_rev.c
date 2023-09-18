@@ -17,7 +17,7 @@ void print_rev(char *s)
 		lenght++;
 	}
 
-	for (q = lenght; s[q] >= 0; q--)
+	for (q = lenght; q >= 0; q--)
 	{
 		if (lenght == 0)
 		break;
