@@ -24,6 +24,8 @@ int _atoi(char *s)
 		{
 			result = result * 10 + (s[q] - 48);
 		}
+		else if (result != 0)
+			break;
 		else if ((*s == ' ') || (!(*s >= '0' && *s <= '9')))
 				continue;
 	}
