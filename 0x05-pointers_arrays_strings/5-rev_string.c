@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * void rev_string - Reverse strings
+ * rev_string - Reverse strings
  *
  * @s: parameter for string
  *
@@ -21,6 +21,6 @@ void rev_string(char *s)
 	{
 		save = s[q];
 		s[q] = s[lenght - 1 - q];
-		s[lenght - 1- q] = save;
+		s[lenght - 1 - q] = save;
 	}
 }
