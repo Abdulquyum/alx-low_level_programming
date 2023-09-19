@@ -9,17 +9,17 @@
  */
 void puts_half(char *str)
 {
-	int q, lenght = 0;
+	int q, length = 0;
 	char string;
 
 	for (q = 0; str[q] != '\0'; q++)
 	{
-		lenght++;
+		length++;
 	}
 
-	if (lenght % 2 == 0)
+	if (length % 2 == 0)
 	{
-		for (q = lenght / 2; str[q] != '\0'; q++)
+		for (q = length / 2; str[q] != '\0'; q++)
 		{
 			string = str[q];
 			_putchar(string);
@@ -27,7 +27,7 @@ void puts_half(char *str)
 	}
 	else
 	{
-		for (q = (lenght - 1) / 2; str[q] != '\0'; q++)
+		for (q = (length + 1) / 2; str[q] != '\0'; q++)
 		{
 			string = str[q];
 			_putchar(string);
