@@ -15,9 +15,6 @@ int _atoi(char *s)
 	{
 		if (s[q] == '\0')
 			break;
-		else if (s[q] == ' ')
-			continue;
-
 		if (s[q] == '-')
 			sign = -1;
 		else if (s[q] == '+')
@@ -27,6 +24,8 @@ int _atoi(char *s)
 		{
 			result = result * 10 + (s[q] - 48);
 		}
+		else if ((*s == ' ') || (!(*s >= '0' && *s <= '9')))
+				continue;
 	}
 	return (result * sign);
 }
