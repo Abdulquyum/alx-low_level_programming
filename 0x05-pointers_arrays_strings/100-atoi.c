@@ -17,17 +17,12 @@ int _atoi(char *s)
 			break;
 		if (s[q] == '-')
 			sign = -1;
-		else if (s[q] == '+')
-			sign = 1;
 
-		if (s[q] >= '0' && s[q] <= '9')
-		{
+		else if (s[q] >= '0' && s[q] <= '9')
 			result = result * 10 + (s[q] - 48);
-		}
+
 		else if (result != 0)
 			break;
-		else if ((*s == ' ') || (!(*s >= '0' && *s <= '9')))
-				continue;
 	}
 	return (result * sign);
 }
