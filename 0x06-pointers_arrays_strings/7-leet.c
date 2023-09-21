@@ -24,6 +24,5 @@ char *leet(char *str)
 		else if (str[q] == 'e' || str[q] == 'E')
 			str[q] = '1';
 	}
-
 	return (str);
 }
