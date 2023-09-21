@@ -8,7 +8,7 @@
  */
 char *rot13(char *str)
 {
-/*	int q;
+	int q;
 
 	for (q = 0; str[q] != '\0'; q++)
 	{
@@ -25,19 +25,4 @@ char *rot13(char *str)
 			str[q] -= 13;
 	}
 	return (str);
-}*/
-	char *s = str;
-	int i;
-
-	for (i = 0; str[i]; i++)
-	{
-		if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
-		{
-			char base = (str[i] >= 'a' && str[i] <= 'z') ? 'a' : 'A';
-			str[i] = (str[i] - base + 13) % 26 + base;
-		}
-	}
-
-	return s;
 }
-
