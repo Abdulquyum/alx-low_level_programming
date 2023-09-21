@@ -20,10 +20,9 @@ int _strcmp(char *s1, char *s2)
 	{
 		len2++;
 	}
-
-	if (len1 < len2)
+	if (s1[q] < s2[2] && len1 < len2)
 		return (15);
-	else if (len1 > len2)
+	else if (s1[q] > s2[q] && len1 > len2)
 		return (-15);
 	else
 		return (0);
