@@ -3,8 +3,10 @@
 /**
  *  _strspn - gets the lenght of a substring
  *
- *  @s: string
+ * @s: string
  * @accept: byte
+ *
+ * Return: number of same character
  */
 unsigned int _strspn(char *s, char *accept)
 {
