@@ -3,7 +3,7 @@
 
 /**
  * _strpbrk - searches a string for any of a set of bytes
- * @s: string 
+ * @s: string
  * @accept: match string
  *
  * Return: pointer to s that matches accept
@@ -12,7 +12,7 @@ char *_strpbrk(char *s, char *accept)
 {
 	int q;
 
-	while(*s != '\0')
+	while (*s != '\0')
 	{
 		for (q = 0; accept[q] != '\0'; q++)
 		{
