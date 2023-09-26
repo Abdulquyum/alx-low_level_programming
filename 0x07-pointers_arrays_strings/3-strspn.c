@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  *  _strspn - gets the lenght of a substring
@@ -12,6 +13,8 @@ unsigned int _strspn(char *s, char *accept)
 {
 	int q, count = 0, j, flag = 0;
 
+	if (*s == '\0' || s == NULL)
+		return (0);
 
 	for (q = 0; s[q] != '\0'; q++)
 	{
