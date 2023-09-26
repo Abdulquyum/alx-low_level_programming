@@ -6,7 +6,7 @@
  * @s: parameter for string
  * @c: character to be searched for
  *
- * return: characters seen
+ * Return: characters seen
  */
 char *_strchr(char *s, char c)
 {
