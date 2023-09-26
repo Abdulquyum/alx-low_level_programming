@@ -11,13 +11,11 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int q, count = 0, j, flag = 0;
-
-	if (*s == '\0' || s == NULL)
-		return (0);
+	int q, count = 0, j;
 
 	for (q = 0; s[q] != '\0'; q++)
 	{
+		int flag = 0;
 		for (j = 0; accept[j] != '\0'; j++)
 		{
 			if (s[q] == accept[j])
@@ -31,5 +29,6 @@ unsigned int _strspn(char *s, char *accept)
 		else
 			break;
 	}
+
 	return (count);
 }
