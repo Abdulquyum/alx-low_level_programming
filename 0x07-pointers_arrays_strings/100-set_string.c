@@ -10,13 +10,8 @@
  */
 void set_string(char **s, char *to)
 {
-	int q;
-
 	if (to == 0)
 		return;
 
-	for (q = 0; *s[q] != '\0'; q++)
-	{
-		to[q] = *s[q];
-	}
+	*s = to;
 }

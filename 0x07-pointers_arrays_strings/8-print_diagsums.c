@@ -3,7 +3,7 @@
 
 /**
  * print_diagsums - prints diagonal sum of 2-D arrays
- * @a: parameter for array pointer 
+ * @a: parameter for array pointer
  * @size: size of array
  *
  * Return: Nothing
