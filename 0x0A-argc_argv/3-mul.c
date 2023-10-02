@@ -5,7 +5,7 @@
  * main - Entry point
  *
  * @argc: argument count
- * @argv; argument vector
+ * @argv: argument vector
  *
  * Return: Always 0 Success
  */
