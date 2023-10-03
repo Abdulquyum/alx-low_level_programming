@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * main - Entry point
@@ -16,9 +17,9 @@ int main(int argc, char *argv[])
 	if (argc == 1)
 		printf("%d\n", 0);
 
-	for (q = 2; q <= argc; q++)
+	for (q = 1; q < argc; q++)
 	{
-		if (*argv[q] >= 'a' && *argv[q] <= 'z')
+		if (strspn(argv[q], "0123456789") != strlen(argv[q]))
 		{
 			printf("Error\n");
 			return (1);
