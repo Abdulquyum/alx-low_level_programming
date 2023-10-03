@@ -14,8 +14,11 @@ int main(int argc, char *argv[])
 {
 	int q, result = 0;
 
-	if (argc == 1)
+	if (argc < 3)
+	{
 		printf("%d\n", 0);
+		return (1);
+	}
 
 	for (q = 1; q < argc; q++)
 	{
@@ -32,4 +35,3 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
-
