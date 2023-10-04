@@ -15,9 +15,9 @@ char *str_concat(char *s1, char *s2)
 	int q, i, len1 = 0, len2 = 0;
 
 	if (*s1 == '\0')
-		return (s2);
+		return (NULL);
 	if (*s2 == '\0')
-		return (s1);
+		return (NULL);
 
 	for (q = 0; s1[q] != '\0'; q++)
 		len1++;
@@ -30,7 +30,7 @@ char *str_concat(char *s1, char *s2)
 	if (ptr == NULL)
 		return (NULL);
 
-	for ( q = 0; s1[q] != '\0'; q++)
+	for (q = 0; s1[q] != '\0'; q++)
 	{
 		ptr[q] = s1[q];
 	}
