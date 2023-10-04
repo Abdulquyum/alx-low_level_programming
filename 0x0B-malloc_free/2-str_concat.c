@@ -26,8 +26,8 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	if (*s1 == '\0')
-		ptr = NULL;
-	
+		*ptr = *s2;
+
 
 	if (*s2 == '\0')
 		*ptr = *s1;
