@@ -26,10 +26,11 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	if (*s1 == '\0')
-		*ptr = *s2;
+		return (NULL);
+	
 
 	if (*s2 == '\0')
-		*ptr = *s2;
+		return (NULL);
 
 	for (q = 0; s1[q] != '\0'; q++)
 	{
