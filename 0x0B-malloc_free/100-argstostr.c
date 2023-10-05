@@ -23,20 +23,21 @@ char *argstostr(int ac, char **av)
 
 	av_len += ac - 1;
 
-	ptr = malloc(av_len);
+	ptr = malloc(av_len + 1);
 
 	if (ptr == NULL)
 		return (NULL);
 
-	for (q = 0; i < ac; q++)
+	for (q = 0; q < ac; q++)
 	{
 		for (i = 0; av[q][i] != '\0'; i++)
 		{
 			ptr[iterate++] = av[q][i];
 		}
-		ptr[iterate++] = '\n';
+		ptr[iterate] = '\n';
+		iterate++;
 	}
-	ptr[iterate] = '\0';
+	ptr[av_len] = '\0';
 
 	return (ptr);
 }
