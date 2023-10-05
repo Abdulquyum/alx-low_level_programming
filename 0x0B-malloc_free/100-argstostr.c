@@ -20,10 +20,10 @@ char *argstostr(int ac, char **av)
 
 	for (q = 0; q < ac; q++)
 	{
-		av_len += _strlen(av[q]) + 1;
+		av_len += _strlen(av[q]) + ac - 1;
 	}
 
-	ptr = malloc(av_len);
+	ptr = malloc(av_len + 1);
 
 	if (ptr == NULL)
 		return (NULL);
@@ -36,7 +36,7 @@ char *argstostr(int ac, char **av)
 		}
 		ptr[iterate++] = '\n';
 	}
-	ptr[iterate - 1] = '\0';
+	ptr[iterate] = '\0';
 
 	return (ptr);
 }
