@@ -28,7 +28,7 @@ char *argstostr(int ac, char **av)
 	if (ptr == NULL)
 		return (NULL);
 
-	for (q = 0; av < ac; q++)
+	for (q = 0; i < ac; q++)
 	{
 			int arg_len = strlen(av[q]);
 			strcpy(ptr + iterate, av[i]);
