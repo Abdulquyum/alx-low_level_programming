@@ -19,9 +19,8 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 
 	for (q = 0; q < ac; q++)
-	{
-		av_len += _strlen(av[q]) + ac - 1;
-	}
+		av_len += _strlen(av[q]);
+	av_len += ac - 1;
 
 	ptr = malloc(av_len + 1);
 
