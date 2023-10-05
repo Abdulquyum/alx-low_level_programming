@@ -4,8 +4,8 @@
 /**
  * free_grid - free previously created array
  *
- * @grid - 2 dimensional array
- * @height - rows or height of the array
+ * @grid:  2 dimensional array
+ * @height:  rows or height of the array
  *
  * Return: nothing
  */
