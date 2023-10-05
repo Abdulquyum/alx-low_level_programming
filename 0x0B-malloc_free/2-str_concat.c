@@ -33,10 +33,10 @@ char *str_concat(char *s1, char *s2)
 		*ptr = *s1;
 
 	if (s1 == NULL)
-		s1 = " ";
+		s1 = '\0';
 
 	if (s2 == NULL)
-		s2 = " ";
+		s2 = '\0';
 
 
 	for (q = 0; s1[q] != '\0'; q++)
