@@ -20,9 +20,10 @@ char *argstostr(int ac, char **av)
 
 	for (q = 0; q < ac; q++)
 		av_len += _strlen(av[q]);
+
 	av_len += ac - 1;
 
-	ptr = malloc(av_len + 1);
+	ptr = malloc(av_len);
 
 	if (ptr == NULL)
 		return (NULL);
