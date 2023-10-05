@@ -3,10 +3,8 @@
 
 /**
  * str_concat - concatenates string
- *
  * @s1: first string
  * @s2: second string
- *
  * Return: pointer to concatenated string
  */
 char *str_concat(char *s1, char *s2)
@@ -26,7 +24,6 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; s2[i] != '\0'; i++)
 		len2++;
 
-
 	ptr = malloc(len1 * sizeof(char) + len2 * sizeof(char) + 1);
 
 	if (ptr == NULL)
@@ -35,15 +32,12 @@ char *str_concat(char *s1, char *s2)
 	if (*s1 == '\0')
 		*ptr = *s2;
 
-
 	if (*s2 == '\0')
 		*ptr = *s1;
 
-
 	for (q = 0; s1[q] != '\0'; q++)
-	{
 		ptr[q] = s1[q];
-	}
+
 	for (q = 0; s2[q] != '\0'; q++)
 	{
 		ptr[len1] = s2[q];
