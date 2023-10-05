@@ -41,6 +41,13 @@ char *argstostr(int ac, char **av)
 	return (ptr);
 }
 
+/**
+ * _strlen - string lenght
+ *
+ * @str: string passed
+ *
+ * Return: lenght of string
+ */
 int _strlen(char *str)
 {
 	if (*str == '\0')
@@ -48,4 +55,3 @@ int _strlen(char *str)
 
 	return (1 + _strlen(str + 1));
 }
-			
