@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < coin_count; i++)
 	{
-		while(cents >= coins[i])
+		while (cents >= coins[i])
 		{
 			cents -= coins[i];
 			count++;
@@ -40,5 +40,5 @@ int main(int argc, char *argv[])
 
 	printf("%d\n", count);
 
-	return 0;
+	return (0);
 }
