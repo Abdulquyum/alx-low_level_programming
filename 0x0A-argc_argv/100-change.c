@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 
 	if (cents < 0)
 	{
-		printf("%d\n", 0);
+		printf("0\n");
 	}
 
 	for (i = 0; i < coin_count; i++)
