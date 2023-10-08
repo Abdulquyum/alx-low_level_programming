@@ -26,12 +26,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	new_ptr = malloc(new_size);
 
-	if (new_size == old_size)
-	{
-		return (ptr);
-		free(ptr);
-	}
-
 	if (new_size > old_size)
 		min_byte = old_size;
 	else
