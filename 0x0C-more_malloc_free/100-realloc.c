@@ -36,10 +36,12 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		_memcpy(new_ptr, ptr, min_byte);
 		free(ptr);
 		return (new_ptr);
-		free(new_ptr);
 	}
 	else
+	{
+		free(ptr);
 		return (NULL);
+	}
 }
 
 /**
