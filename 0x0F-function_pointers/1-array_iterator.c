@@ -2,7 +2,8 @@
 /**
  * array_iterator - iterates through an array
  *
- * @size: arrya size
+ * @array: array of integers
+ * @size: size of array
  * @action: function pointer
  *
  * Return: nothing
