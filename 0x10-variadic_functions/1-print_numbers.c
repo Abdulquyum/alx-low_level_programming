@@ -30,6 +30,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			else
 				printf("%d", m);
 		}
+		else
+			printf("%d", m);
 	}
 	printf("\n");
 
