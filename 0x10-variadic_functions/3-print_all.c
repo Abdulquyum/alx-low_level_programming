@@ -11,7 +11,7 @@
 void print_all(const char * const format, ...)
 {
 	int q;
-	char *str, *comma = ", ";
+	char *str;
 
 	va_list all;
 
@@ -22,15 +22,15 @@ void print_all(const char * const format, ...)
 	{
 		if (format[q] == 'c')
 		{
-			printf("%c%s", va_arg(all, int), comma);
+			printf("%c", va_arg(all, int));
 		}
 		else if (format[q] == 'i')
 		{
-			printf("%d%s", va_arg(all, int), comma);
+			printf("%d", va_arg(all, int));
 		}
 		else if (format[q] == 'f')
 		{
-			printf("%f%s", va_arg(all, double), comma);
+			printf("%f", va_arg(all, double));
 		}
 		else if(format[q] == 's')
 		{
