@@ -32,7 +32,7 @@ void print_all(const char * const format, ...)
 		{
 			printf("%f", va_arg(all, double));
 		}
-		else if(format[q] == 's')
+		else if (format[q] == 's')
 		{
 			str = va_arg(all, char *);
 
@@ -47,7 +47,6 @@ void print_all(const char * const format, ...)
 		}
 		q++;
 	}
-
 	printf("\n");
 
 	va_end(all);
