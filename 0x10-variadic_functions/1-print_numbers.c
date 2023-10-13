@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdarg.h>
+
+/**
+ * print_numbers - prints all numbers passed
+ *
+ * @separartor: comma to be printed after each number
+ * @n: number of arguments
+ *
+ * Return: Nothing
+ */
+void print_numbers(const char *separator, const unsigned int n, ...)
+{
+	unsigned int q, m;
+
+	va_list print_num;
+
+	va_start(print_num, n);
+
+	if (separator == NULL)
+		return;
+
+	if (n == 0)
+		return;
+
+	for (q = 0; q < n; q++)
+	{
+		m = va_arg(print_num, int);
+
+		if (q < n - 1)
+			printf("%d%s", m, separator);
+		else
+			printf("%d", m);
+	}
+	printf("\n");
+
+	va_end(print_num);
+}
