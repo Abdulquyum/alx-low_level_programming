@@ -32,11 +32,11 @@ int main(int argc, char *argv[])
 
 	for (q = 0; q < n; q++)
 	{
-		instruct_ptr = (unsigned char*)ptr;
+		instruct_ptr = (unsigned char *)ptr;
 		opcode = *instruct_ptr;
 		printf("%02x", opcode);
 
-		if (q < n -1)
+		if (q < n - 1)
 			printf(" ");
 		instruct_ptr++;
 	}
