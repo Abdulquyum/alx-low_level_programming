@@ -6,6 +6,8 @@
  * @array: array of intergers
  * @size: size of array
  * @cmp: pointer for function
+ *
+ * Return: index where the function does not return 0
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
@@ -16,6 +18,9 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 	if (size <= 0)
 		return (-1);
+
+	if (cmp == NULL)
+		return (0);
 
 	for (q = 0; q < size; q++)
 	{
