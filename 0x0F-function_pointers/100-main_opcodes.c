@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	int (*ptr)(int, char **) = &main;
+	unsigned char (*ptr)(int, char **) = (unsigned char (*)(int, char **))main;
 
 	for (q = 0; q < n; q++)
 	{
