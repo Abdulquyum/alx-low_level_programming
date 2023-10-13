@@ -45,6 +45,8 @@ void print_all(const char * const format, ...)
 		{
 			printf(", ");
 		}
+		else
+			return;
 		q++;
 	}
 	printf("\n");
