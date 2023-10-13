@@ -10,14 +10,17 @@
  */
 int sum_them_all(const unsigned int n, ...)
 {
-	unsigned int q, sum = 0, m;
+	unsigned int q;
+	int sum = 0, m;
 
 	va_list add_list;
 
 	va_start(add_list, n);
 
 	if (n == 0)
+	{
 		return (0);
+	}
 
 	for (q = 0; q < n; q++)
 	{
