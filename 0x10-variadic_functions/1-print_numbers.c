@@ -4,7 +4,7 @@
 /**
  * print_numbers - prints all numbers passed
  *
- * @separartor: comma to be printed after each number
+ * @separator: comma to be printed after each number
  * @n: number of arguments
  *
  * Return: Nothing
