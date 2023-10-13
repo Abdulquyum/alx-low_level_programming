@@ -41,6 +41,10 @@ void print_all(const char * const format, ...)
 			else
 				printf("%s", "nil");
 		}
+		else if (format[q] != '\0')
+		{
+			printf(", ");
+		}
 		q++;
 	}
 
