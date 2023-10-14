@@ -33,8 +33,10 @@ void print_all(const char * const format, ...)
 				break;
 		}
 
+	
 		i++;
 
+	
 		if (format[i])
 			printf(", ");
 	}
