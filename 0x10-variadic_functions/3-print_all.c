@@ -41,12 +41,12 @@ void print_all(const char * const format, ...)
 			else
 				printf("%s", "nil");
 		}
-		else if (format[q] != '\0')
+
+		if (format[q + 1] != '\0' && (format[q + 1] == 'c' || format[q + 1] == 'i' || format[q + 1] == 'f' || format[q + 1] == 's'))
 		{
 			printf(", ");
 		}
-		else
-			return;
+
 		q++;
 	}
 	printf("\n");
