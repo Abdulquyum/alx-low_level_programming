@@ -5,7 +5,7 @@ greet: db "Hello, Holberton", 0
 fmt: db "%s", 10, 0
 
 section .text
-global main 
+global main
 
 main:
 push rbp
