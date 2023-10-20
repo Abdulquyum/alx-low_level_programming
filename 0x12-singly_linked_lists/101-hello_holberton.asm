@@ -13,5 +13,8 @@ main:
 	mov rsi, greet
 	xor rax, rax
 	call printf
-	ret
+
 	pop rbp
+
+	mov rax, 0
+	ret
