@@ -12,7 +12,7 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *newNode, *temp;
+	list_t *newNode;
 
 	if (str == NULL)
 		return (NULL);
@@ -24,24 +24,8 @@ list_t *add_node(list_t **head, const char *str)
 	if (newNode->str == NULL)
 		return (NULL);
 
-	newNode->next = NULL;
-
-	if (*head == NULL)
-	{
-		*head = newNode;
-	}
-
-	else
-	{
-		temp = *head;
-
-		while (temp->next != NULL)
-		{
-			temp = temp->next;
-		}
-
-		temp->next = newNode;
-	}
+	newNode->next = *head;
+	*head = newNode;
 
 	return (newNode);
 }
