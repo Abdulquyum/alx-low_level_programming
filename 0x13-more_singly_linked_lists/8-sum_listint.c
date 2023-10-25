@@ -22,7 +22,7 @@ int sum_listint(listint_t *head)
 		while (temp != 0)
 		{
 			num = temp->n;
-			sum+= num;
+			sum += num;
 			temp = temp->next;
 		}
 	}
