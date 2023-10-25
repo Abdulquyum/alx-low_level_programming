@@ -21,10 +21,11 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	q = 0;
 	while (q < index)
 	{
-		if (temp->next != 0)
-		{
+		if (temp->next == 0)
+			return (NULL);
+
+		else if (temp->next != 0)
 			temp = temp->next;
-		}
 		q++;
 	}
 
