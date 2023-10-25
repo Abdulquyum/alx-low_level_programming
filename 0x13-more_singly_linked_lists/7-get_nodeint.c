@@ -3,7 +3,7 @@
 /**
  * get_nodeint_at_index - gets the node at nth position
  *
- * @head - pointer to listint_t list
+ * @head: pointer to listint_t list
  * @index: position to get its node
  *
  * Return: nth node of the list
