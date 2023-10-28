@@ -10,12 +10,21 @@
  */
 void print_binary(unsigned long int n)
 {
-	if (n == 0)
+	unsigned long int mask, q;
+	
+	for (q = 0; mask > 0; mask <<= 1, q++)
 	{
-		putchar('0');
-		return;
-	}
+		if (n == 0)
+			return;
 
-	print_binary(n / 2);
-	_putchar(n % 2 + '0');
+		else if (n == 1)
+			return;
+
+		n >>= 1;
+
+		if (n & mask)
+			_putchar('1');
+		else
+			_putchar('0');
+	}
 }
