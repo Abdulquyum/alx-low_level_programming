@@ -13,7 +13,10 @@ int create_file(const char *filename, char *text_content)
 	int fd;
 	ssize_t writetxt;
 
-	fd = creat(filename,O_RDWR);
+	if (filename)
+		truncate(filename, 0);
+
+	fd = open(filename, O_CREAT | O_RDWR);
 
 	if (filename == NULL)
 		return (-1);
@@ -27,7 +30,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 
 	if (text_content == NULL)
-		return (fd);
+		creat(filename, O_RDWR);
 
 	return (1);
 }
