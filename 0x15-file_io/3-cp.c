@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 		if (readtxt != writetxt)
 		{
 			close(readtxt);
-			exit(0);
+			exit(1);
 		}
 	}
 
@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
 	{
 		close(readtxt);
 		close(writetxt);
-		exit(0);
+		exit(1);
 	}
 
 	if (close(fd1) == -1)
