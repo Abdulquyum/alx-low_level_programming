@@ -10,18 +10,18 @@
  */
 int main(int argc, char *argv[])
 {
-	int fd, fd1, fd2, i, fd1_close, fd2_close;
+	int fd, fd1, fd2;
 	char buffer[BUFF_SIZE];
 	ssize_t readtxt, writetxt;
 
 	if (argc != 3)
 	{
-		dprintf(2, "Usage: %s %s\n", argv[1], argv[2]);
+		dprintf(2, "Usage: cp %s %s\n", argv[1], argv[2]);
 		exit(97);
 	}
 
 	if (argv[2] != NULL)
-		fd = open(argv[2], O_TRUNC);
+		fd = open(argv[2], O_WRONLY, O_TRUNC);
 
 	if (fd == -1)
 		return (-1);
@@ -46,30 +46,30 @@ int main(int argc, char *argv[])
 
 	strcpy(buffer, argv[1]);
 
-	i = 0;
-	while (readtxt != 0)
+	while ((readtxt = read(fd1, buffer, BUFF_SIZE)) > 0)
 	{
-		readtxt = read(fd1, buffer, BUFF_SIZE);
-
-		if (readtxt == -1)
-			return (-1);
-
 		writetxt = write(fd2, buffer, readtxt);
 
-		if (writetxt < 0)
-			return (-1);
-		i++;
+		if (readtxt != writetxt)
+		{
+			close(readtxt);
+			exit(0);
+		}
 	}
 
-	fd1_close = close(fd1);
-	fd2_close = close(fd2);
+	if (readtxt == -1)
+	{
+		close(readtxt);
+		close(writetxt);
+		exit(0);
+	}
 
-	if (fd1_close == -1)
+	if (close(fd1) == -1)
 	{
 		dprintf(2, "Can't close fd %d\n", fd1);
 		exit(100);
 	}
-	else if (fd2_close == -1)
+	else if (close(fd2) == -1)
 	{
 		dprintf(2, "Can't close fd %d\n", fd2);
 		exit(100);
