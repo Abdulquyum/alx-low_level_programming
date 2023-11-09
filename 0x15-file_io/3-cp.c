@@ -4,14 +4,14 @@
  * main - copies the content of a file to another
  *
  * @argc: argument count
- * argv: argument vector
+ * @argv: argument vector
  *
  * Return: Always 0 Success
  */
 int main(int argc, char *argv[])
 {
-	int fd1, fd2, i, fd1_close, fd2_close;
-	char *buffer[BUFF_SIZE];
+	int fd, fd1, fd2, i, fd1_close, fd2_close;
+	char buffer[BUFF_SIZE];
 	ssize_t readtxt, writetxt;
 
 	if (argc != 3)
@@ -21,12 +21,21 @@ int main(int argc, char *argv[])
 	}
 
 	if (argv[2] != NULL)
-		open(argv[2], O_TRUNC);
+		fd = open(argv[2], O_TRUNC);
 
-	if (argv[1] == NULL)
+	if (fd == -1)
+		return (-1);
+
+	if (argv[1] == NULL || argv[1][0] == '\0')
 	{
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
+	}
+
+	if (argv[2] == NULL || argv[2][0] == '\0')
+	{
+		dprintf(2, "Error: Can't read from file %s\n", argv[2]);
+		exit(99);
 	}
 
 	fd1 = open(argv[1], O_RDONLY);
@@ -35,18 +44,22 @@ int main(int argc, char *argv[])
 	if (fd1 == -1 || fd2 == -1)
 		return (-1);
 
-	for (i = 0; *argv[1] != '\0'; i++)
-		buffer[i] = argv[1]++;
+	strcpy(buffer, argv[1]);
 
-	readtxt = read(fd1, buffer, BUFF_SIZE);
+	i = 0;
+	while (readtxt != 0)
+	{
+		readtxt = read(fd1, buffer, BUFF_SIZE);
 
-	if (readtxt == -1)
-		return (-1);
+		if (readtxt == -1)
+			return (-1);
 
-	writetxt = write(fd2, buffer, readtxt);
+		writetxt = write(fd2, buffer, readtxt);
 
-	if (writetxt < 0)
-		return (-1);	
+		if (writetxt < 0)
+			return (-1);
+		i++;
+	}
 
 	fd1_close = close(fd1);
 	fd2_close = close(fd2);
