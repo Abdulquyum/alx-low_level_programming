@@ -3,10 +3,10 @@
 #include <stdlib.h>
 
 /**
- * add_node_end - adds node to end of list_t list
+ * add_dnodeint_end - adds node to end of list_t list
  *
  * @head: pointer to pointer to list
- * @str: pointer to string
+ * @n: list element
  *
  * Return: pointer to new node
  */
