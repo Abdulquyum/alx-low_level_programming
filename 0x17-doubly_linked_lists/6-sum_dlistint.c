@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * sum_listint - sumall elements of lsitint_t list
+ * sum_dlistint - sumall elements of lsitint_t list
  *
  * @head: pointer to list
  *
