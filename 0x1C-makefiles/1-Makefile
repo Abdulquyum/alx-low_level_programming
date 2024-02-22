@@ -2,7 +2,7 @@ CC = gcc
 SRC:= $(wildcard *.c)
 
 all: main.o school.o
-	${CC} main.c school.c -o school
+	${CC} $(SRC) -o school
 
 main.o: main.c
 	@gcc -c main.c
